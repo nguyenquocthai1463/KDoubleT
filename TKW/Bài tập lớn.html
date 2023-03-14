@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Danh sách sản phẩm</title>
+</head>
+
+<body>
+	<style>
+		@import url('https://fonts.googleapis.com/css2? family= Open+Sans:wght@400;600 & display=swap');
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			font-family: 'Open Sans', sans-serif;
+			font-size: 14px;
+			color: #111;
+			line-height: 1.15;
+		}
+		#wrapper{
+			max-width: 1170px;
+			margin: 0 auto;
+		}
+		.headline{
+			text-align: center;
+			margin: 40px 0px;
+		}
+		h3{
+			font-size: 18px;
+			color: #b111;
+			padding: 10px 20px;
+			text-transform: uppercase;
+			border: 1px solid #bebebe;
+			display: inline-block;
+			color: #555;
+			font-weight: 600;
+		}
+		ul.products{
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		ul.products li{
+			flex-basis: 25%;
+			padding-left: 15px;
+			padding-right: 15px;
+			box-sizing: border-box;
+			margin-bottom: 30px;
+		}
+		ul.products li img{
+			max-width: 100%;
+			height: auto;
+		}
+		ul.products li .product-top {
+			position: relative;
+			overflow: hidden;
+		}
+		ul.products li .product-top .product-thumb{
+			display: block;
+		}
+		ul.products li:hover .product-top .product-thumb img{
+			filter:opacity(80%);
+		}
+		ul.products li .product-top .product-thumb img{
+			display: block;
+
+		}
+		ul.products li .product-top a.buy-now{
+			text-transform: uppercase;
+			text-decoration: none;
+			text-align: center;
+			display: block;
+			background-color: #446084;
+			color: #fff;
+			padding: 10px 0px;
+			position: absolute;
+			bottom: -36px;
+			width: 100%;
+			transition: 0.25s ease-in-out;
+			opacity: 0.85;
+		}
+		ul.products li:hover a.buy-now{ 
+			bottom: 0px;
+		}
+		ul.products li .product-info {
+			padding: 10px 0px;
+		}
+		ul.products li .product-info a{
+			display: block;
+			text-decoration: none;
+		}
+		ul.products li .product-info a.product-cat{
+			font-size: 11px;
+			text-transform: uppercase;
+			color: #9e9e9e ;
+			padding: 3px 0px;
+		}
+		ul.products li .product-info a.product-name{
+			color: #334862;
+			padding: 3px 0px;
+		}
+		ul.products li .product-info .product-price{
+			color: #111;
+			padding: 2px 0px;
+			font-weight: 600;
+		}
+		
+		*{
+            box-sizing: border-box;
+        }
+		
+/*  		Thanh tìm kiếm*/
+		
+    #search-box{
+        background:#fff;
+        border-radius: 30px;
+    }
+    #search-box #search-text{
+        border: none;
+        outline: none;
+        background:none;
+        font-size: 18px;
+        width: 0;
+        padding: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    #search-box:hover #search-text,#search-box #search-text:valid{
+        width: 300px;
+        padding: 10px 0px 10px 15px;
+    }
+    #search-box  #search-btn{
+        background-color: #fff;
+        cursor: pointer;
+        border: none;
+        padding: 15px 15px;
+        border-radius: 50%;
+        font-size: 18px;
+    }
+	</style>
+	
+	<table>
+	<div>
+		<tr>
+			<td>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo" width="200"</td> 
+			<td>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image.png" width="50"></td>
+			<td>
+					<p>	
+						<b>Hotline mua hàng</b>
+						<br>Gọi ngay: 033.513.8809
+					</p>
+			</td>
+			<td>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image1" width="50"</td>
+			<td>
+				<p>
+						<b>Giao hàng tận nơi</b>
+						<br>Miễn phí từ 5 sản phẩm
+				</p>
+			</td>
+			<td>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image2" width="50"</td>
+			<td>
+				<p>
+						<b>1Đổi 1 nếu lỗi hàng</b>
+						<br>Trong vòng 7 ngày 
+				</p>
+			</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image3" width="30"</td>
+			<td>
+				<p>Đăng Nhâp / Đăng Ký
+					<br><b>Tài Khoản Của Tôi </b>
+				</p>
+			</td>
+			</tr>	
+	</div>
+	</table>
+	<table>
+		<div>
+			<tr>
+				<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td>
+						  <form action="" id="search-box">
+        <input  type="text" id="search-text" placeholder="Tìm kiếm sản phẩm..." required> 
+        <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+    </form>
+		
+				</td>
+			</tr>
+		</div>
+	</table>
+	
+	<div id="wrapper">
+		<div class="headline">
+			<h3>Sản Phẩm Bán Chạy</h3>
+		</div>
+		<ul class="products">
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="" class="product-thumb">
+							<img src="img1.png" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+						<!--Mua ngay -->
+					</div>
+					<div class="product-info">
+						<a href="" class="product-cat">Shirt</a>
+						<a href="" class="product-name">ÁO THUN LOCAL BRAND NAVY BSX750XD</a>
+						<div class="product-price">245.000 Đ</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="" class="product-thumb">
+							<img src="img2.jpg" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+						<!--Mua ngay -->
+					</div>
+					<div class="product-info">
+						<a href="" class="product-cat">Shirt</a>
+						<a href="" class="product-name">ÁO THUN LOCAL BRAND NAVY BSX750XD</a>
+						<div class="product-price">245.000 Đ</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="" class="product-thumb">
+							<img src="img3.jpg" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+						<!--Mua ngay -->
+					</div>
+					<div class="product-info">
+						<a href="" class="product-cat">Shirt</a>
+						<a href="" class="product-name">ÁO THUN LOCAL BRAND NAVY BSX750XD</a>
+						<div class="product-price">245.000 Đ</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="" class="product-thumb">
+							<img src="img4.jpg" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+						<!--Mua ngay -->
+					</div>
+					<div class="product-info">
+						<a href="" class="product-cat">Shirt</a>
+						<a href="" class="product-name">ÁO THUN LOCAL BRAND NAVY BSX750XD</a>
+						<div class="product-price">245.000 Đ</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="" class="product-thumb">
+							<img src="img5.jpg" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+						<!--Mua ngay -->
+					</div>
+					<div class="product-info">
+						<a href="" class="product-cat">Shirt</a>
+						<a href="" class="product-name">ÁO THUN LOCAL BRAND NAVY BSX750XD</a>
+						<div class="product-price">245.000 Đ</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="" class="product-thumb">
+							<img src="img6.jpg" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+						<!--Mua ngay -->
+					</div>
+					<div class="product-info">
+						<a href="" class="product-cat">Shirt</a>
+						<a href="" class="product-name">ÁO THUN LOCAL BRAND NAVY BSX750XD</a>
+						<div class="product-price">245.000 Đ</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="" class="product-thumb">
+							<img src="img7.jpg" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+						<!--Mua ngay -->
+					</div>
+					<div class="product-info">
+						<a href="" class="product-cat">Shirt</a>
+						<a href="" class="product-name">ÁO THUN LOCAL BRAND NAVY BSX750XD</a>
+						<div class="product-price">245.000 Đ</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="product-item">
+					<div class="product-top">
+						<a href="" class="product-thumb">
+							<img src="img8.jpg" alt="">
+						</a>
+						<a href="" class="buy-now">Mua ngay</a>
+						<!--Mua ngay -->
+					</div>
+					<div class="product-info">
+						<a href="" class="product-cat">Shirt</a>
+						<a href="" class="product-name">ÁO THUN LOCAL BRAND NAVY BSX750XD</a>
+						<div class="product-price">245.000 Đ</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
