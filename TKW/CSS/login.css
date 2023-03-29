@@ -1,0 +1,571 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    margin: 0;
+    position: relative;
+}
+ 
+.header {
+    width: 100%;
+    height: 129px;
+    display: flex;
+    top: 0;
+    position: absolute;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.header .logo {
+    width: 129px;
+    height: 129px;
+    margin: 0 auto;
+    margin-left: 105px;
+}
+
+.header .logo a{
+    text-decoration: none;
+}
+
+.header .logo a img {
+    height: 129px;
+}
+
+.header .mid-menu {
+    width: 30%;
+    margin-left: 0px;
+    margin-right: 100px;
+}
+
+.header .mid-menu ul {
+    margin: 0;
+    padding: 0 ;
+    list-style: none;
+    display: flex;
+}
+
+.header .mid-menu ul li {
+    height: 129px;
+    padding: 0 20px;
+}
+
+.header .mid-menu ul li a {
+    text-decoration: none;
+    line-height: 129px;
+    color: #121212;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+	
+}
+
+.header .mid-menu ul li a:hover{
+    color: rgb(141, 141, 141);
+}
+
+.right-menu{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    margin-right: 175px;
+}
+
+.box {
+    margin: 100px auto;
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    top: -60px;
+}
+
+.container-1 {
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+
+.container-1 input#search {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 200px;
+    height: 50px;
+    /* background: #2b303b; */
+    border: none;
+    font-size: 20px;
+    float: left;
+    color: black;
+    padding-left: 45px;
+    /* -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; */
+    /* border-radius: 5px; */
+    border-bottom: 2.5px solid black;
+
+    /* -webkit-transition: background .55s ease;
+    -moz-transition: background .55s ease;
+    -ms-transition: background .55s ease;
+    -o-transition: background .55s ease;
+    transition: background .55s ease; */
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+
+.container-1 input#search:-moz-placeholder {
+    /* Firefox 18- */
+    color: #65737e;
+}
+
+.container-1 input#search::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #65737e;
+}
+
+.container-1 input#search:-ms-input-placeholder {
+    color: #65737e;
+}
+
+.container-1 .icon {
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+}
+
+.container-1 input#search:hover,
+.container-1 input#search:focus,
+.container-1 input#search:active {
+    outline: none;
+    background: #ffffff;
+}
+
+.right-menu .login{
+    height: 10px;
+    position: absolute;
+    top: 47px;
+    left: 200px;
+    display: flex;
+    width: 100%;
+}
+
+.right-menu .login a{
+    display: flex;
+    text-decoration: none;
+}
+
+
+
+.right-menu .login svg g path{
+    padding: 0 30px;
+}
+
+.right-menu .login p{
+    font-size: 20px;
+    color: #121212;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 10px 20px;
+}
+
+.right-menu .login p:hover{
+    color: rgb(141, 141, 141);
+}
+
+.right-menu .login img{
+    height: 45px;
+    width: 45px;
+}
+
+.content {
+    position: absolute;
+    top: 129px;
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    z-index: 0;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.login-box {
+    background: #fff;
+    padding: 20px;
+    max-width: 480px;
+    margin: 25vh auto;
+    margin-top: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.login-box:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-box h2 {
+    margin: 20px 0 20px;
+    padding: 0;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.social-button {
+    background-position: 25px 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 3px;
+    margin: 10px auto;
+    outline: rgb(255, 255, 255) none 0px;
+    padding-left: 20%;
+    transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#facebook-connect {
+    background: rgb(255, 255, 255) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook.svg?sanitize=true') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+    border: 1px solid rgb(60, 90, 154);
+}
+
+#facebook-connect:hover {
+    border-color: rgb(60, 90, 154);
+    background: rgb(60, 90, 154) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook-white.svg?sanitize=true') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+    -webkit-transition: all .8s ease-out;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease-out;
+}
+
+#facebook-connect span {
+    box-sizing: border-box;
+    color: rgb(60, 90, 154);
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0px none rgb(255, 255, 255);
+    outline: rgb(255, 255, 255) none 0px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#facebook-connect:hover span {
+    color: #FFF;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#google-connect {
+    background: rgb(255, 255, 255) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+    border: 1px solid rgb(220, 74, 61);
+}
+
+#google-connect:hover {
+    border-color: rgb(220, 74, 61);
+    background: rgb(220, 74, 61) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus-white.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+    -webkit-transition: all .8s ease-out;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease-out;
+}
+
+#google-connect span {
+    box-sizing: border-box;
+    color: rgb(220, 74, 61);
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0px none rgb(220, 74, 61);
+    outline: rgb(255, 255, 255) none 0px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#google-connect:hover span {
+    color: #FFF;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#twitter-connect {
+    background: rgb(255, 255, 255) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/twitter.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
+    border: 1px solid rgb(85, 172, 238);
+}
+
+#twitter-connect:hover {
+    border-color: rgb(85, 172, 238);
+    background: rgb(85, 172, 238) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/twitter-white.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
+    -webkit-transition: all .8s ease-out;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease-out;
+}
+
+#twitter-connect span {
+
+    box-sizing: border-box;
+    color: rgb(85, 172, 238);
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0px none rgb(220, 74, 61);
+    outline: rgb(255, 255, 255) none 0px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#twitter-connect:hover span {
+    color: #FFF;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#linkedin-connect {
+    background: rgb(255, 255, 255) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/linkedin.svg?sanitize=true') no-repeat scroll 13px 0px / 28px 45px padding-box border-box;
+    border: 1px solid rgb(0, 119, 181);
+}
+
+#linkedin-connect:hover {
+    border-color: rgb(0, 119, 181);
+    background: rgb(0, 119, 181) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/linkedin-white.svg?sanitize=true') no-repeat scroll 13px 0px / 28px 45px padding-box border-box;
+    -webkit-transition: all .8s ease-out;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease-out;
+}
+
+#linkedin-connect span {
+    box-sizing: border-box;
+    color: rgb(0, 119, 181);
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0px none rgb(0, 119, 181);
+    outline: rgb(255, 255, 255) none 0px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#linkedin-connect:hover span {
+    color: #FFF;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.footer {
+    position: absolute;
+    top: 779px;
+    height: 400px;
+    width: 100%;
+    background-color: #121212;
+}
+
+.footer .sub-footer {
+    width: 50%;
+    display: flex;
+
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.footer .sub-footer a {
+    text-decoration: none;
+}
+
+.footer .sub-footer p {
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.footer .sub-footer a p {
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.footer .sub-footer a p:hover {
+    color: rgb(141, 141, 141);
+}
+
+.footer .sub-footer .left-sub-footer {
+    margin: 0 auto;
+}
+
+.footer .sub-footer .mid-sub-footer {
+    margin: 0 auto;
+
+}
+
+.footer .sub-footer .right-sub-footer {
+    margin: 0 auto;
+}
+
+.footer .container-form {
+    width: 100%;
+    height: 70px;
+    /* margin: 30px auto; */
+}
+
+.footer .container-form .form-footer {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.footer .container-form .form-footer p {
+    color: #ffffff;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 555;
+}
+
+.footer .container-form .form-footer .form-mail {
+    background-color: transparent;
+    width: 279.5px;
+    border: none;
+    color: #ffffff;
+    border-bottom: 3px solid whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+
+.footer .container-form .form-footer .button-subscribe {
+    background-color: white;
+    /* margin-left: 99px; */
+}
+
+.footer .container-form .form-footer .button-subscribe input {
+    border: none;
+    font-size: 20px;
+    font-weight: 555;
+    height: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer .container-form .form-footer .button-subscribe:hover {
+    background-color: rgb(48, 48, 173);
+}
+
+.footer .container-form .form-footer .button-subscribe:hover input {
+    background-color: rgb(48, 48, 173);
+    color: white;
+    /* margin-left: 99px; */
+}
+
+.footer .container-form .form-footer .button-subscribe input {}
+
+.footer .container-form .form-footer .form-mail:hover,
+.footer .container-form .form-footer .form-mail:focus,
+.footer .container-form .form-footer .form-mail:active {
+    outline: none;
+}
+
+.title-footer {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(117, 117, 117);
+    position: absolute;
+    top: 1149px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.title-footer p {
+    color: rgb(18, 18, 18);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+.task-bar {
+    position: absolute;
+    position: fixed;
+    width: 35px;
+    height: 105px;
+    z-index: 2;
+    top: 360px;
+    right: 15px;
+}
+
+.task-bar img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1.5px solid rgb(255, 255, 255);
+    object-fit: cover;
+}
+
+.task-bar img:hover {
+    border: 1.5px solid rgb(123, 123, 123);
+}
+
+.button-inbox {
+    position: absolute;
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    top: 625px;
+    right: 15px;
+    border: 1.5px solid rgb(255, 255, 255);
+    margin: auto;
+}
+
+.button-inbox a img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.button-inbox:hover {
+    border: 1.5px solid rgb(123, 123, 123);
+}
